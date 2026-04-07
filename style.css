@@ -57,7 +57,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.3s;
-    font-family: var(--fonte-principal) !important;
+    font-family: var(--fonte-principal) ;
 }
 
 .nav-links li a:hover {
@@ -66,10 +66,10 @@ body {
 
 .whatsapp-btn {
     background: #25D366;
-    color: white !important;
+    color: white ;
     padding: 10px 20px;
     border-radius: 30px;
-    font-weight: 500 !important;
+    font-weight: 500 ;
 }
 
 /* SUB-NAVBAR CATEGORIAS */
@@ -127,7 +127,7 @@ body {
     color: #555;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: var(--fonte-principal) !important;
+    font-family: var(--fonte-principal) ;
 }
 
 /* EFEITO AO PASSAR O MOUSE (Interatividade Luxo) */
@@ -270,21 +270,21 @@ body {
     }
 }
 /* Ajuste das setinhas para não sumirem no canto da tela */
-.prev { left: 20px !important; }
-.next { right: 20px !important; }
+.prev { left: 20px ; }
+.next { right: 20px ; }
 /* AJUSTE DE FOCO: PRIORIDADE NA MARCA (TOPO DA FOTO) */
 
 .slide-foco-marca img {
     width: 100%;
     /* Mantemos a altura que você já tem no carrossel */
-    height: 450px !important; 
+    height: 450px ; 
     
     /* Preenche tudo */
     object-fit: cover; 
     
     /* AQUI ESTÁ A MÁGICA: object-position define onde a 'lente' foca */
     /* center top (centralizado lateralmente, colado no topo verticalmente) */
-    object-position: center top !important; 
+    object-position: center top ; 
 }
 
 /* Ícone da Sacola */
@@ -558,11 +558,11 @@ body {
 #masculino .product-grid, 
 #feminino .product-grid, 
 #novidades .novidade-grid {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important; 
-    gap: 40px !important; 
-    max-width: 1400px !important; 
-    margin: 40px auto !important;
+    display: grid ;
+    grid-template-columns: repeat(4, 1fr) ; 
+    gap: 40px ; 
+    max-width: 1400px ; 
+    margin: 40px auto ;
     justify-items: center;
 }
 
@@ -570,43 +570,43 @@ body {
 #masculino .product-card, 
 #feminino .product-card, 
 #novidades .novidade-card {
-    max-width: 340px !important; 
-    padding: 25px !important; 
-    border-radius: 12px !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+    max-width: 340px ; 
+    padding: 25px ; 
+    border-radius: 12px ;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) ;
 }
 
 /* Aumenta a FOTO apenas nestas seções */
 #masculino .product-image, 
 #feminino .product-image, 
 #novidades .novidade-grid .product-image {
-    height: 320px !important; /* Espaço da foto maior */
-    width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
+    height: 320px ; /* Espaço da foto maior */
+    width: 100% ;
+    display: flex ;
+    align-items: center ;
 }
 
 #masculino .product-image img, 
 #feminino .product-image img, 
 #novidades .novidade-grid img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important; /* Foto preenche tudo sem cortar */
-    padding: 5px !important;
+    width: 100% ;
+    height: 100% ;
+    object-fit: contain ; /* Foto preenche tudo sem cortar */
+    padding: 5px ;
 }
 
 /* Ajuste de texto para as caixas grandes */
 #masculino .product-info h3, 
 #feminino .product-info h3, 
 #novidades .product-info h3 {
-    font-size: 18px !important;
+    font-size: 18px ;
     margin-bottom: 10px;
 }
 
 #masculino .price, 
 #feminino .price, 
 #novidades .price {
-    font-size: 24px !important;
+    font-size: 24px ;
 }
 
 /* BOTÃO COMPRAR */
@@ -614,7 +614,7 @@ body {
     display: block;
     width: 100%;
     background: var(--bordo);
-    color: var(--dourado) !important;
+    color: var(--dourado) ;
     padding: 12px 0;
     text-align: center;
     text-decoration: none;
@@ -862,7 +862,7 @@ background-position: center;
     max-width: 500px; /* Limite para não "estourar" o layout */
     height: auto;
     object-fit: contain;
-    background-color: transparent !important;
+    background-color: transparent ;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6)); /* Sombra nos perfumes */
 }
 
@@ -1013,18 +1013,18 @@ background-position: center;
 .social-icons {
     display: flex;            /* Coloca um ao lado do outro */
     gap: 20px;                /* Espaço entre o Instagram e o Facebook */
-    margin-top: 30px !important; /* AQUI você controla a descida manual */
+    margin-top: 30px ; /* AQUI você controla a descida manual */
     margin-bottom: 15px;      /* Espaço para o que vier abaixo */
 }
 
 .social-icons a i {
-    font-size: 28px !important; /* Tamanho dos ícones */
-    color: #ffffff !important;  /* Cor branca (ou a cor que preferir) */
+    font-size: 28px ; /* Tamanho dos ícones */
+    color: #ffffff ;  /* Cor branca (ou a cor que preferir) */
     transition: 0.3s ease;
 }
 
 .social-icons a i:hover {
-    color: #d4af37 !important;  /* Cor dourada ao passar o mouse */
+    color: #d4af37 ;  /* Cor dourada ao passar o mouse */
     transform: scale(1.1);      /* Efeito de crescer levemente */
 }
 
@@ -1052,8 +1052,8 @@ background-position: center;
 
 /* --- MANTER SEUS 6 PERFUMES ALINHADOS --- */
 .product-grid {
-    display: grid !important;
-    grid-template-columns: repeat(6, 1fr) !important; /* Força os 6 que você tinha */
+    display: grid ;
+    grid-template-columns: repeat(6, 1fr) ; /* Força os 6 que você tinha */
     gap: 15px;
     width: 100%;
 }
@@ -1066,9 +1066,9 @@ background-position: center;
 
 /* --- GARANTIR QUE A NAVBAR NÃO ESMAGUE O CONTEÚDO --- */
 .navbar {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-between ;
 }
 .installment-info {
     display: block;
@@ -1081,11 +1081,11 @@ background-position: center;
 }
 /* AJUSTE EXCLUSIVO PARA O PARCELAMENTO DA PROMOÇÃO */
 .promo-installment {
-    display: block !important;
-    font-size: 22px !important;    /* Deixou bem grande */
-    margin-top: 25px !important;   /* Empurrou bem para baixo do valor vermelho */
-    color: #27ae60 !important;    /* Verde chamativo */
-    font-weight: 900 !important;   /* Bem negrito */
+    display: block ;
+    font-size: 22px ;    /* Deixou bem grande */
+    margin-top: 25px ;   /* Empurrou bem para baixo do valor vermelho */
+    color: #27ae60 ;    /* Verde chamativo */
+    font-weight: 900 ;   /* Bem negrito */
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -1217,17 +1217,17 @@ background-position: center;
     
     /* 1. FAZ O CONTEÚDO DESCER (BANNER) */
     .image-carousel, #home, main {
-        margin-top: 280px !important; 
+        margin-top: 280px ; 
     }
 
     /* 2. BARRA DE PROCURA: FORÇA ELA A APARECER ABAIXO DOS ÍCONES */
     .container-sub {
-        display: block !important; /* Garante que ela não suma */
-        position: relative !important; /* Sai do modo fixo se estiver embolando */
-        margin-top: 80px !important; /* O espaço que você pediu abaixo dos produtos */
-        padding: 15px !important;
-        width: 100% !important;
-        clear: both !important; /* Limpa qualquer item flutuando do lado */
+        display: block ; /* Garante que ela não suma */
+        position: relative ; /* Sai do modo fixo se estiver embolando */
+        margin-top: 80px ; /* O espaço que você pediu abaixo dos produtos */
+        padding: 15px ;
+        width: 100% ;
+        clear: both ; /* Limpa qualquer item flutuando do lado */
     }
 
     /* 3. PADRONIZAÇÃO: MASCULINO, FEMININO E NOVIDADES */
@@ -1239,42 +1239,56 @@ background-position: center;
     #novidades .novidade-grid,
     #masculino .product-grid, 
     #feminino .product-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 40px !important; /* Espaço entre os perfumes */
-        padding: 0 20px !important;
-        width: 100% !important;
+        display: flex ;
+        flex-direction: column ;
+        align-items: center ;
+        gap: 40px ; /* Espaço entre os perfumes */
+        padding: 0 20px ;
+        width: 100% ;
     }
 
     /* 4. CARDS: TODOS COM O MESMO TAMANHO DE APP */
     .product-card, .novidade-card {
-        width: 100% !important;
-        max-width: 330px !important;
-        margin: 0 auto !important;
-        height: auto !important;
+        width: 100% ;
+        max-width: 330px ;
+        margin: 0 auto ;
+        height: auto ;
     }
 
     /* 5. TÍTULOS: DISTÂNCIA CERTA */
     .category-title, h2 {
-        margin-top: 50px !important;
-        margin-bottom: 20px !important;
+        margin-top: 50px ;
+        margin-bottom: 20px ;
     }
 
     /* Esconde o que não deve aparecer no mobile */
     .nav-links {
-        display: none !important;
+        display: none ;
     }
+}
+
+/* Adicione isso ao final do seu arquivo CSS */
+.product-grid {
+    display: grid ;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) ;
+    gap: 25px ; /* Isso garante o espaço entre os perfumes */
+    align-items: stretch ;
+}
+
+.product-card {
+    height: 100% ;
+    display: flex ;
+    flex-direction: column;
 }
 
 /* AJUSTE PARA O PC - ESCONDER BOTÃO MENU */
 @media screen and (min-width: 992px) {
     .menu-toggle, .mobile-menu-icon, .fa-bars {
-        display: none !important;
+        display: none ;
     }
     
     #novidades .novidade-grid {
-        display: grid !important;
-        grid-template-columns: repeat(4, 1fr) !important;
+        display: grid ;
+        grid-template-columns: repeat(4, 1fr) ;
     }
 }
