@@ -1267,14 +1267,13 @@ background-position: center;
     }
 }
 
-/* Adicione isso ao final do seu arquivo CSS */
-.product-grid {
-    display: grid ;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) ;
-    gap: 25px ; /* Isso garante o espaço entre os perfumes */
-    align-items: stretch ;
-}
 
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
 .product-card {
     height: 100% ;
     display: flex ;
