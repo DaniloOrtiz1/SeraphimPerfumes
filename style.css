@@ -1268,18 +1268,6 @@ background-position: center;
 }
 
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    padding: 20px;
-}
-.product-card {
-    height: 100% ;
-    display: flex ;
-    flex-direction: column;
-}
-
 /* AJUSTE PARA O PC - ESCONDER BOTÃO MENU */
 @media screen and (min-width: 992px) {
     .menu-toggle, .mobile-menu-icon, .fa-bars {
@@ -1290,4 +1278,22 @@ background-position: center;
         display: grid ;
         grid-template-columns: repeat(4, 1fr) ;
     }
+}
+.product-grid {
+    display: grid ;
+    grid-template-columns: repeat(4, 1fr) ; /* Força 4 colunas no PC */
+    gap: 30px ;
+    padding: 20px ;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    height: 100% ; /* Faz todos os cards terem o mesmo tamanho */
+    display: flex ;
+    flex-direction: column ;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
