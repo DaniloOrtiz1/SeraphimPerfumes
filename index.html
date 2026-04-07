@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serafhim Perfumes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="imagem/marca-sem.png" alt="Serafim Perfumes" class="logo-img-nav">
+        </div>
+        
+        <div class="nav-right" style="display: flex; align-items: center; gap: 20px;">
+            <a href="https://wa.me/5511955555555" target="_blank" class="nav-atendimento">
+                <i class="fas fa-user-tie"></i>
+                <span>Atendimento</span>
+            </a>
+            <div class="cart-icon" id="cart-icon" style="position: relative; cursor: pointer;">
+                <img src="imagem/sacola-sem (2).png" alt="Sacola" class="sacola-img" style="height: 60px; width: auto;">
+                <span id="cart-count">0</span>
+            </div>
+            <button class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Sua Sacola</h2>
+            <button id="close-cart">&times;</button>
+        </div>
+
+        <div id="cart-items" class="cart-items-container"></div>
+
+        <div class="cart-logistica">
+            <label>Calcular frete do pedido:</label>
+            <div class="cep-group">
+                <input type="text" id="cart-cep" placeholder="Digite o CEP" maxlength="8">
+                <button id="btn-frete" onclick="calcularFreteDinamico()">OK</button>
+            </div>
+            <div id="msg-logistica"></div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-resumo-linha">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">R$ 0,00</span>
+            </div>
+            <div class="cart-resumo-linha">
+                <span>Frete:</span>
+                <span id="cart-shipping-cost">R$ 0,00</span>
+            </div>
+            <div class="cart-total-final">
+                <span>Total:</span>
+                <span id="cart-total-value">R$ 0,00</span>
+            </div>
+
+            <button class="checkout-btn" onclick="irParaPagamento()">
+                <i class="fas fa-credit-card"></i> Pagar e Parcelar
+            </button>
+
+            <div class="pagamento-seguro">
+                <p class="titulo-seguranca"><i class="fas fa-shield-alt"></i> Pagamento 100% Seguro</p>
+                <div class="selo-pagseguro">
+                    <img src="imagem/pagseguro-155 (1).png" alt="PagSeguro">
+                </div>
+                <div class="bandeiras-cartoes">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-pix"></i>
+                </div>
+                <span class="texto-criptografia">Ambiente criptografado</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sub-navbar">
+        <div class="container-sub">
+            <ul class="category-list">
+                <li class="category-item"><a href="#promocoes"><i class="fas fa-tag"></i><span>Promoções</span></a></li>
+                <li class="category-item"><a href="#masculino"><i class="fas fa-mars"></i><span>Masculinos</span></a></li>
+                <li class="category-item"><a href="#feminino"><i class="fas fa-venus"></i><span>Femininos</span></a></li>
+                <li class="category-item"><a href="#novidades"><i class="fas fa-star"></i><span>Novidades</span></a></li>
+                <li class="category-item"><a href="#presentes"><i class="fas fa-gift"></i><span>Presentes</span></a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Procurar perfume..." id="search-input">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <section class="image-carousel">
+        <div class="carousel-container">
+            <div class="my-slide fade"><img src="imagem/perfum-color.png" alt="Perfume 1"></div>
+            <div class="my-slide fade"><img src="imagem/sabah-caro.png" alt="Perfume 2"></div>
+            <div class="my-slide fade"><img src="imagem/asad-caro.png" alt="Perfume 3"></div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <section id="masculino" class="products-section">
+        <div class="container-produtos">
+            <h2 class="category-title">Perfumes Masculinos</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/dalal.png" alt="Dalal"><span class="badge">Destaque</span></div>
+                    <div class="product-info"><h3>Dalal</h3><p class="quantity">100ml</p><p class="price">R$289.90</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/assad-bour.png" alt="Asad Bourbon"></div>
+                    <div class="product-info"><h3>Asad Bourbon</h3><p class="quantity">50ml</p><p class="price">R$ 195,00</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/assad-pre.png" alt="Asad Preto"></div>
+                    <div class="product-info"><h3>Asad Preto</h3><p class="quantity">50ml</p><p class="price">R$ 195,00</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/asad-elix.png" alt="Asad Elixir"></div>
+                    <div class="product-info"><h3>Asad Elixir</h3><p class="quantity">50ml</p><p class="price">R$ 195,00</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/champ-verm.png" alt="Champion Sugar"></div>
+                    <div class="product-info"><h3>Champion Sugar</h3><p class="quantity">50ml</p><p class="price">R$ 195,00</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/champ-dou.png" alt="Champion Money"></div>
+                    <div class="product-info"><h3>Champion Money</h3><p class="quantity">100ml</p><p class="price">R$ 195,00</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/attar.png" alt="Attar"></div>
+                    <div class="product-info"><h3>Attar Al Wasal</h3><p class="quantity">100ml</p><p class="price">R$ 195,00</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promocoes" class="promo-highlight-section">
+        <div class="container-promo">
+            <div class="promo-wrapper">
+                <div class="promo-image">
+                    <img src="imagem/assad-bour.png" alt="Promo" id="promo-perfume-img">
+                    <span class="promo-badge">Oferta do Dia</span>
+                </div>
+                <div class="promo-info">
+                    <h2 class="promo-title">Asad Bourbon Special</h2>
+                    <p class="promo-subtitle">O clássico absoluto.</p>
+                    <ul class="promo-specs">
+                        <li><i class="fas fa-vial"></i> 100ml</li>
+                        <li><i class="fas fa-hourglass-half"></i> Longa Duração</li>
+                    </ul>
+                    <div class="promo-price-block">
+                        <span class="price-old">R$ 450,00</span>
+                        <span class="price-new">R$ 389,90</span>
+                        <span class="installment-info promo-installment">OU 10X DE R$ 38,99</span>
+                    </div>
+                    <button class="promo-buy-btn">Adicionar à Sacola</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="separator-produtos">
+
+    <section id="feminino" class="products-section">
+        <div class="container-produtos">
+            <h2 class="category-title">Perfumes Femininos</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/ameera.png" alt="Ameera"></div>
+                    <div class="product-info"><h3>Al Wataniah Ameeratil</h3><p class="quantity">100ml</p><p class="price">R$ 310,00</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/yara-ros.png" alt="Yara Rosa"></div>
+                    <div class="product-info"><h3>Lattafa Yara Rosa</h3><p class="quantity">100ml</p><p class="price">R$ 310,00</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/yara-ama.png" alt="Yara Amarelo"></div>
+                    <div class="product-info"><h3>Lattafa Yara Amarelo</h3><p class="quantity">100ml</p><p class="price">R$ 310,00</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/sabah.png" alt="Sabah"></div>
+                    <div class="product-info"><h3>Sabah Al Ward</h3><p class="quantity">100ml</p><p class="price">R$ 310,00</p><span class="installment-info">ou 10x de R$ 31,00</span><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="novidades" class="section-novidades">
+        <div class="container-produtos">
+            <h2 class="category-title">Novidades</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="imagem/layan.png" alt="Novo"><span class="badge">Novo</span></div>
+                    <div class="product-info"><h3>Layaan</h3><p class="quantity">75ml</p><p class="price">R$ 289,90</p><a href="#" class="buy-btn">Comprar</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="separator-produtos">
+
+    <section id="presentes" class="presente-highlight-section">
+        <div class="container-presente">
+            <div class="presente-wrapper">
+                <div class="pres-img-container">
+                    <img src="imagem/trasnp-ser.png" alt="Kit Seraphim">
+                </div>
+                <div class="pres-info">
+                    <h2 class="pres-title">Kit Queridinhos - Seraphim</h2>
+                    <p class="pres-price">R$ 459,90</p>
+                    <button class="pres-buy-btn">ESCOLHER PRESENTE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer class="main-footer">
+    <div class="footer-container">
+        
+        <div class="footer-box about">
+            <h3 class="footer-title">Seraphim Perfumes</h3>
+            <p>Sua essência, nossa paixão. Levando as melhores fragrâncias xclusivas até você com elegância e sofisticação.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-box links">
+            <h3 class="footer-title">Institucional</h3>
+            <ul>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Trocas e Devoluções</a></li>
+                <li><a href="#">Prazos de Entrega</a></li>
+                <li><a href="#">Privacidade</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box payment">
+            <h3 class="footer-title">Pagamento Seguro</h3>
+            <div class="payment-grid">
+                <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+                <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+                <img src="https://img.icons8.com/color/48/pix.png" alt="Pix">
+                <img src="imagem/pagseguro-155 (1).png" alt="PagSeguro">
+            </div>
+        </div>
+
+        <div class="footer-box contact-menu">
+            <h3 class="footer-title">Atendimento</h3>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>(11) 95555-5555</span>
+                </div>
+                <div class="contact-item">
+                    <i class="far fa-envelope"></i>
+                    <span>contato@serafim.com.br</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>PagSeguro Ativo</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Seraphim Perfumes - Excelência em Fragrâncias | Desenvolvido por Danilo Ortiz </p>
+    </div>
+</footer>
+
+<div id="modal-checkout" class="modal-sucesso" style="display: none;">
+    <div class="modal-content">
+        <div id="modal-icon"></div>
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-texto"></p>
+        <button onclick="fecharModal()" class="btn-modal-fechar">Entendido</button>
+    </div>
+</div>
+    <script src="seguranca.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

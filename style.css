@@ -1,0 +1,1280 @@
+:root {
+    --bordo: #3f1515f3;
+    --dourado: #f8c2dd; /* Tom de Ouro Real */
+    --branco: #ffffff;
+    --texto: #f8c2dd;
+    --fonte-principal: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+
+
+body {
+    background: var(--bordo);
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background-image:url(https://images.unsplash.com/photo-1528459105426-b9548367069b?q=80&w=364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ;
+    height: 90px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+   
+}
+
+.logo-img-nav {
+    height: 100px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--texto);
+    margin: 0 15px;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-family: var(--fonte-principal) !important;
+}
+
+.nav-links li a:hover {
+    color: var(--dourado);
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500 !important;
+}
+
+/* SUB-NAVBAR CATEGORIAS */
+.sub-navbar {
+    background-color: var(--branco); /* Fundo branco puro */
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 90px; /* Logo abaixo da sua Navbar principal */
+    z-index: 999;
+    border-bottom: 1px solid rgba(216, 193, 63, 0.1); /* Linha dourada bem suave */
+    display: flex;
+    border-color: #3f1515;
+    align-items: center;
+}
+
+.container-sub {
+    max-width: 1400px; /* Um pouco maior para os 6 itens */
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    /* Grid: Categorias à esquerda, Busca à direita */
+    grid-template-columns: 1fr 320px;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.category-list {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Espaço entre os itens */
+}
+
+.category-item a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent; /* Linha de fundo para o hover */
+    padding-bottom: 5px;
+}
+
+/* O DESENHO/ÍCONE VETORIAL */
+.category-item i {
+    font-size: 24px; /* Tamanho do ícone vetorial */
+    color: #888; /* Cor cinza padrão */
+    margin-bottom: 6px;
+    transition: 0.3s ease;
+}
+
+.category-item span {
+    font-size: 11px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--fonte-principal) !important;
+}
+
+/* EFEITO AO PASSAR O MOUSE (Interatividade Luxo) */
+.category-item a:hover i {
+    color: var(--dourado); /* Ícone fica dourado */
+    transform: translateY(-3px) scale(1.05); /* Leve movimento e aumento */
+}
+
+.category-item a:hover span {
+    color: var(--dourado);
+}
+
+.category-item a:hover {
+    border-bottom-color: var(--dourado); /* Linha dourada embaixo */
+}
+
+/* BARRA DE BUSCA (Direita) */
+.search-box {
+    display: flex;
+    background: #fdfdfd; /* Fundo do input */
+    border-radius: 4px; /* Cantos menos arredondados, mais sofisticados */
+    padding: 2px 10px;
+    border: 1px solid #3f1515;
+    transition: 0.3s;
+}
+
+.search-box:focus-within {
+    border-color: #3f1515; /* Destaque no foco */
+    box-shadow: 0 0 10px rgba(216, 193, 63, 0.1);
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: var(--dourado);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    transform: scale(1.2);
+}
+/* --- CONTROLE DO ITEM ATENDIMENTO --- */
+
+.nav-atendimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    
+    /* COR DO ÍCONE E TEXTO (Mude aqui!) */
+    color: #f8c2dd; 
+    
+    transition: 0.3s;
+}
+
+/* Mexer apenas no bonequinho (ícone) */
+.nav-atendimento i {
+    font-size: 22px; /* Tamanho do boneco */
+    margin-bottom: 2px;
+}
+
+/* Mexer apenas no texto escrito */
+.nav-atendimento span {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.nav-atendimento:hover {
+    color: #ffffff; /* Fica branco quando passa o mouse */
+    transform: translateY(-2px); /* Dá um leve pulinho */
+}
+
+/* --- CARROSSEL SEM BOTÕES E COM TAMANHO AJUSTADO --- */
+.image-carousel {
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 100px; /* Isso empurra o carrossel para baixo da sua Nav fixa */
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1400px; /* Largura ideal para não distorcer */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    
+    /* PROPORÇÃO FIXA: Isso garante que todos os slides sejam idênticos */
+    aspect-ratio: 16 / 7; /* Se quiser mais alto, tente 16 / 9. Se quiser mais baixo, 21 / 9 */
+}
+
+.my-slide img {
+    width: 100%;
+    height: 100%; /* Ela vai preencher exatamente o tamanho do container acima */
+    
+    /* A MÁGICA PARA NÃO CORTAR ERRADO */
+    object-fit: contain; /* Tente 'contain' se não quiser cortar NADA da foto */
+    /* OU use 'cover' se quiser que preencha tudo, mas ajuste o foco abaixo: */
+    /* object-fit: cover; */
+    
+    object-position: 50% 40%; 
+    background-color: #3d1414; /* Cor de fundo para as fotos que forem menores que o quadro */
+    display: block;
+}
+
+/* Ajuste para não ficar um 'paredão' no celular */
+/* AJUSTE PARA CELULAR (Telas de até 768px) */
+@media (max-width: 768px) {
+    .image-carousel {
+        margin-top: 80px; /* Diminui o respiro da Nav no celular */
+        padding: 0 10px;  /* Diminui o recuo lateral para ganhar espaço */
+    }
+
+    .carousel-container {
+        /* MUDANÇA DE PROPORÇÃO: 
+           No celular, 16/7 fica muito fino. 
+           Usamos 4/3 ou 1/1 (Quadrado) para os perfumes aparecerem grandes. */
+        aspect-ratio: 4 / 3; 
+    }
+
+    .my-slide img {
+        /* No celular, às vezes o foco precisa ser mais centralizado */
+        object-position: 50% 15%; 
+    }
+}
+/* Ajuste das setinhas para não sumirem no canto da tela */
+.prev { left: 20px !important; }
+.next { right: 20px !important; }
+/* AJUSTE DE FOCO: PRIORIDADE NA MARCA (TOPO DA FOTO) */
+
+.slide-foco-marca img {
+    width: 100%;
+    /* Mantemos a altura que você já tem no carrossel */
+    height: 450px !important; 
+    
+    /* Preenche tudo */
+    object-fit: cover; 
+    
+    /* AQUI ESTÁ A MÁGICA: object-position define onde a 'lente' foca */
+    /* center top (centralizado lateralmente, colado no topo verticalmente) */
+    object-position: center top !important; 
+}
+
+/* Ícone da Sacola */
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--dourado);
+    color: var(--bordo);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.sacola-img {
+    height: 60px; /* Mantendo seu tamanho original */
+    width: auto;
+    /* Adiciona uma sombra suave para dar profundidade */
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.5)); 
+    transition: all 0.3s ease; /* Faz a mudança ser suave, não brusca */
+}
+
+.cart-icon:hover .sacola-img {
+    /* No hover, ela ganha um brilho dourado (sua cor --dourado) */
+    filter: drop-shadow(0px 0px 12px var(--dourado));
+    transform: scale(1.1); /* Ela aumenta levemente de tamanho */
+}
+
+/* Painel da Sacola */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Começa escondido */
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    color: #333;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    transition: 0.4s;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.active {
+    right: 0; /* Desliza para dentro */
+}
+
+.cart-header {
+    padding: 20px;
+    background: var(--bordo);
+    color: var(--dourado);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-items-container {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Estilo do Item dentro da Sacola */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.item-details h4 { font-size: 14px; margin-bottom: 5px; }
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: auto;
+}
+
+.cart-footer { padding: 20px; border-top: 1px solid #eee; }
+.checkout-btn {
+    width: 100%;
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* SEÇÃO DE PRODUTOS */
+.products-section {
+    padding: 100px 5% 80px; /* Espaço fixo do carrossel */
+    background-color: var(--bordo);
+}
+
+.container-produtos {
+    max-width: 1400px; /* Aumentado para caber 6 produtos melhor */
+    margin: 0 auto;
+}
+
+.category-title {
+    color: var(--dourado);
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+    margin-top: 60px;
+    border-left: 4px solid var(--dourado);
+    padding-left: 15px;
+}
+
+/* A MÁGICA DO GRID (6 PRODUTOS NA HORIZONTAL) */
+/* --- 1. Ajuste das Colunas (4 no PC) --- */
+.product-grid, .novidade-grid, .promocao-grid, .presente-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* --- 2. Responsividade (1 por linha no Celular) --- */
+@media (max-width: 768px) {
+    .product-grid, .novidade-grid, .promocao-grid, .presente-grid {
+        grid-template-columns: 1fr; /* Produtos ficam grandes e um embaixo do outro */
+        padding: 0 15px;
+    }
+    
+    .product-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+/* --- 3. Cores dos Cartões de Pagamento --- */
+.bandeiras-cartoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Cores das marcas */
+.fa-cc-visa { color: #1a1f71; }
+.fa-cc-mastercard { color: #eb001b; }
+.fa-cc-amex { color: #007bc1; }
+.fa-pix { color: #32bcad; }
+
+/* Ajuste do quadrado de pagamento para ficar pequeno e rente ao fim */
+.pagamento-seguro {
+    margin-top: auto; /* Empurra para o final da sacola */
+    padding: 10px;
+    background: #fdfdfd;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+/* CARD DO PRODUTO */
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* Isso aqui é o segredo: faz o card acabar logo após o botão */
+    height: fit-content; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--dourado);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    background: #fdfdfd;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: var(--dourado);
+    color: var(--bordo);
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+    /* Removemos o 'flex: 1' para o conteúdo não tentar esticar o card */
+    display: block; 
+}
+
+.product-info h3 {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    /* Mantém o Dalal e os outros na mesma linha de preço */
+    min-height: 34px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Garante que o preço e o parcelamento não fiquem 'dançando' */
+.price {
+    color: var(--bordo);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 5px; /* Espaço fixo após o título */
+}
+
+.installment-info {
+    display: block;
+    color: #27ae60;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 12px; /* Espaço fixo antes do botão comprar */
+}
+.quantity {
+    color: #888;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: var(--bordo);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Força 4 colunas e centraliza apenas nestas IDs */
+#masculino .product-grid, 
+#feminino .product-grid, 
+#novidades .novidade-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important; 
+    gap: 40px !important; 
+    max-width: 1400px !important; 
+    margin: 40px auto !important;
+    justify-items: center;
+}
+
+/* Aumenta a caixa (Card) apenas nestas seções */
+#masculino .product-card, 
+#feminino .product-card, 
+#novidades .novidade-card {
+    max-width: 340px !important; 
+    padding: 25px !important; 
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+}
+
+/* Aumenta a FOTO apenas nestas seções */
+#masculino .product-image, 
+#feminino .product-image, 
+#novidades .novidade-grid .product-image {
+    height: 320px !important; /* Espaço da foto maior */
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+#masculino .product-image img, 
+#feminino .product-image img, 
+#novidades .novidade-grid img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* Foto preenche tudo sem cortar */
+    padding: 5px !important;
+}
+
+/* Ajuste de texto para as caixas grandes */
+#masculino .product-info h3, 
+#feminino .product-info h3, 
+#novidades .product-info h3 {
+    font-size: 18px !important;
+    margin-bottom: 10px;
+}
+
+#masculino .price, 
+#feminino .price, 
+#novidades .price {
+    font-size: 24px !important;
+}
+
+/* BOTÃO COMPRAR */
+.buy-btn {
+    display: block;
+    width: 100%;
+    background: var(--bordo);
+    color: var(--dourado) !important;
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: 1px solid var(--dourado);
+    margin-top: 10px;
+}
+
+/* SEPARADOR */
+.separator-produtos {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, var(--dourado), transparent);
+    margin: 50px 0;
+    opacity: 0.3;
+}
+
+/* --- ESTILOS DA SEÇÃO DE PROMOÇÃO DESTAQUE --- */
+.promo-highlight-section {
+    padding: 60px 0;
+    background-image: url(https://images.unsplash.com/photo-1543157145-f78c636d023d?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ; /* Um fundo bem clarinho para destacar do bordo */
+    display: flex;
+    justify-content: center; /* Centraliza a seção inteira na tela */
+    width: 100%;
+}
+
+.container-promo {
+    /* A MÁGICA: Pega 70% da largura da tela do navegador */
+    width: 70vw; 
+    margin: 0 auto; /* Garante o alinhamento central */
+    background: #ffffffd0;
+    border-radius: 15px; /* Cantos arredondados de luxo */
+    box-shadow: 0 10px 30px rgba(63, 21, 21, 0.1); /* Sombra suave na cor bordo */
+    overflow: hidden; /* Garante que nada saia das bordas arredondadas */
+    border: 1px solid rgba(63, 21, 21, 0.05);
+}
+
+.promo-wrapper {
+    display: flex; /* Coloca Imagem e Info lado a lado */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 40px;
+    gap: 40px; /* Espaço entre a foto e o texto */
+}
+
+/* LADO ESQUERDO: Imagem */
+.promo-image {
+    flex: 1; /* Pega metade do espaço do wrapper */
+    position: relative;
+    text-align: center;
+}
+
+.promo-image img {
+    max-width: 100%;
+    height: 400px; /* Altura fixa para manter o padrão */
+    object-fit: contain; /* Não distorce a foto */
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2)); /* Profundidade na garrafa */
+    transition: transform 0.3s ease;
+}
+
+.promo-image:hover img {
+    transform: scale(1.03); /* Leve aumento no hover */
+}
+
+.promo-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e74c3c; /* Vermelho Alerta de Promoção */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* LADO DIREITO: Informações */
+.promo-info {
+    flex: 1; /* Pega a outra metade do espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.promo-title {
+    font-family: var(--fonte-principal);
+    font-size: 32px;
+    color: var(--bordo);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.promo-subtitle {
+    color: #777;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.promo-specs {
+    list-style: none;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.promo-specs li {
+    color: #555;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-specs i {
+    color: var(--dourado); /* Seus ícones na cor dourada */
+    width: 20px;
+    text-align: center;
+}
+
+/* BLOCO DE PREÇO */
+.promo-price-block {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-old {
+    color: #aaa;
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+.price-new {
+    color: #e74c3c; /* Preço novo em vermelho destaque */
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.price-installment {
+    color: #555;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* BOTÃO DE COMPRAR DESTAQUE */
+.promo-buy-btn {
+    background-color: var(--bordo);
+    color: var(--dourado);
+    border: 2px solid var(--dourado);
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%; /* Botão pega a largura da info */
+}
+
+.promo-buy-btn:hover {
+    background-color: var(--dourado);
+    color: var(--bordo);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(216, 193, 63, 0.3);
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 992px) {
+    .container-promo {
+        width: 90vw; /* No tablet/celular pega quase a tela toda */
+    }
+    
+    .promo-wrapper {
+        flex-direction: column; /* Empilha a foto em cima do texto */
+        padding: 20px;
+    }
+
+    .promo-image img {
+        height: 250px; /* Diminui a foto no mobile */
+    }
+
+    .promo-title {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .promo-price-block {
+        text-align: center;
+    }
+}
+
+/* --- SEÇÃO PRESENTE DESTAQUE ATUALIZADA --- */
+
+.presente-highlight-section {
+    padding: 60px 0;
+    background-color: var(--bordo); 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-presente {
+    width: 85vw; 
+    max-width: 1200px;
+    
+    /* VOLTANDO COM UNSPLASH AQUI */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), 
+                  url('https://images.unsplash.com/photo-1668127039852-0e7c8b3a1601?q=80&w=871&auto=format&fit=crop');
+background-size: cover;
+background-position: center;
+    
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    overflow: hidden;
+    border: 1px solid var(--dourado);
+}
+
+.presente-wrapper {
+    display: flex;
+    flex-direction: row; /* Garante que fiquem lado a lado */
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 30px;
+}
+
+/* Ajuste da Foto */
+.pres-img-container {
+    flex: 1.2; /* Foto ocupa um pouco mais de 50% */
+    display: flex;
+    justify-content: center;
+}
+
+.pres-img-container img {
+    width: 100%;
+    max-width: 500px; /* Limite para não "estourar" o layout */
+    height: auto;
+    object-fit: contain;
+    background-color: transparent !important;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6)); /* Sombra nos perfumes */
+}
+
+/* Ajuste do Texto */
+.pres-info {
+    flex: 1; /* Texto ocupa o restante */
+    text-align: left;
+}
+
+.pres-title {
+    font-size: 36px;
+    font-weight: 800;
+    color:var(--bordo);
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.pres-price {
+    font-size: 32px;
+    color:#ff4d4d;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.pres-buy-btn {
+    background: var(--bordo);
+    color: var(--dourado);
+    border: 1px solid var(--dourado);
+    border-radius: 15px;
+    padding: 15px 40px;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.pres-buy-btn:hover {
+    background: var(--dourado);
+    color: var(--bordo);
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 768px) {
+    .presente-wrapper {
+        flex-direction: column; /* No celular volta a ser um embaixo do outro */
+        text-align: center;
+    }
+    .pres-info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pres-title { font-size: 26px; }
+    .pres-img-container img { max-width: 300px; }
+}
+
+/* ================================================================
+   NOVO RODAPÉ PROFISSIONAL
+   ================================================================ */
+.main-footer {
+    background: #2a0e0e; /* Um bordo mais escuro para o fundo */
+    padding: 60px 5% 20px;
+    border-top: 2px solid var(--dourado);
+    color: #fff;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr; /* Colunas de tamanhos diferentes */
+    gap: 40px;
+}
+
+.footer-title {
+    color: var(--dourado);
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Coluna de Links */
+.footer-box ul { list-style: none; }
+.footer-box ul li { margin-bottom: 10px; }
+.footer-box ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+.footer-box ul li a:hover { color: var(--dourado); padding-left: 5px; }
+
+/* Grid de Pagamentos */
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.payment-grid img {
+    width: 45px;
+    filter: grayscale(20%); /* Deixa um pouco mais elegante */
+    transition: 0.3s;
+}
+.payment-grid img:hover { filter: grayscale(0%); transform: scale(1.1); }
+
+/* Menu de Contato (Direita) */
+.contact-list {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(248, 194, 221, 0.2);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    color: var(--dourado);
+    font-size: 20px;
+}
+
+.contact-item span {
+    font-size: 14px;
+    color: #eee;
+}
+
+/* Rodapé Final */
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+/* --- ESTILO DOS ÍCONES DE REDE SOCIAL NO FOOTER --- */
+
+.social-icons {
+    display: flex;            /* Coloca um ao lado do outro */
+    gap: 20px;                /* Espaço entre o Instagram e o Facebook */
+    margin-top: 30px !important; /* AQUI você controla a descida manual */
+    margin-bottom: 15px;      /* Espaço para o que vier abaixo */
+}
+
+.social-icons a i {
+    font-size: 28px !important; /* Tamanho dos ícones */
+    color: #ffffff !important;  /* Cor branca (ou a cor que preferir) */
+    transition: 0.3s ease;
+}
+
+.social-icons a i:hover {
+    color: #d4af37 !important;  /* Cor dourada ao passar o mouse */
+    transform: scale(1.1);      /* Efeito de crescer levemente */
+}
+
+
+
+/* Ajuste Celular */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- AJUSTE DO ATENDIMENTO PARA FICAR DO LADO ESQUERDO DA SACOLA --- */
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* --- MANTER SEUS 6 PERFUMES ALINHADOS --- */
+.product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important; /* Força os 6 que você tinha */
+    gap: 15px;
+    width: 100%;
+}
+
+/* --- CORREÇÃO DA ALTURA DOS PRODUTOS --- */
+.product-card {
+    height: 100%; /* Mantém a altura uniforme */
+    min-width: 0;
+}
+
+/* --- GARANTIR QUE A NAVBAR NÃO ESMAGUE O CONTEÚDO --- */
+.navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+.installment-info {
+    display: block;
+    color: #27ae60; /* Um verde discreto ou use var(--dourado) */
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: -6px; /* Cola no preço de cima */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+/* AJUSTE EXCLUSIVO PARA O PARCELAMENTO DA PROMOÇÃO */
+.promo-installment {
+    display: block !important;
+    font-size: 22px !important;    /* Deixou bem grande */
+    margin-top: 25px !important;   /* Empurrou bem para baixo do valor vermelho */
+    color: #27ae60 !important;    /* Verde chamativo */
+    font-weight: 900 !important;   /* Bem negrito */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Ajuste para o preço não ficar colado no botão de adicionar */
+.promo-price-block {
+    margin-bottom: 20px; 
+}
+
+/* ÁREA DE FRETE - AGORA COM FUNDO BORDO E MENOR */
+.cart-logistica {
+    padding: 10px 15px;
+    background: var(--bordo); /* Fundo bordo como no topo */
+    border-top: 1px solid rgba(248, 194, 221, 0.2); /* Linha rosa suave */
+}
+
+.cart-logistica label {
+    font-size: 9px;
+    color: var(--dourado); /* Texto rosa/dourado */
+    margin-bottom: 4px;
+}
+
+.cep-group input {
+    flex: 1;
+    padding: 6px; /* Reduzido */
+    font-size: 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+.cep-group button {
+    background: var(--dourado); /* Botão rosa */
+    color: var(--bordo);
+    padding: 0 10px;
+}
+
+/* RODAPÉ - VALORES TOTAIS */
+.cart-footer { 
+    padding: 15px; 
+    background: var(--bordo); 
+    border-top: 1px solid rgba(248, 194, 221, 0.2);
+}
+
+.cart-resumo-linha {
+    color: #eee;
+    font-size: 12px;
+}
+
+.cart-total-final {
+    font-size: 16px; /* Diminuído para não ocupar tanto espaço */
+    color: var(--dourado);
+    border-top: 1px solid var(--dourado);
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+/* BOTÃO PAGAR - VERDE, MAS COMPACTO */
+.checkout-btn {
+    width: 100%;
+    background: #27ae60; /* Verde sucesso */
+    padding: 10px; 
+    font-size: 13px;
+}
+
+/* ÁREA DOS SELOS - MUITO MENOR */
+.pagamento-seguro {
+    margin-top: 5px; /* Quase nada de espaço em cima */
+    padding: 9px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none; /* Removi a borda tracejada para ficar mais limpo */
+    display: flex; /* Coloca os itens lado a lado */
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espaço entre o logo e os cartões */
+}
+
+.titulo-seguranca, .texto-criptografia {
+    display: none; /* Esconde os textos longos para economizar espaço */
+}
+
+.selo-pagseguro img {
+    max-width: 50px; /* Logo bem pequeno */
+    filter: brightness(0) invert(1);
+}
+
+.bandeiras-cartoes {
+    font-size: 16px; /* Ícones pequenos */
+    margin-bottom: 0;
+}
+
+
+/* PAG SEGURO FINAL */
+.modal-sucesso {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    border: 3px solid #f8c2dd; /* Rosa da Seraphim */
+}
+
+#modal-icon { font-size: 50px; margin-bottom: 10px; }
+#modal-titulo { color: #3d1111; margin-bottom: 15px; }
+#modal-texto { color: #666; line-height: 1.6; margin-bottom: 20px; }
+
+.btn-modal-fechar {
+    background: #3d1111;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. FAZ O CONTEÚDO DESCER (BANNER) */
+    .image-carousel, #home, main {
+        margin-top: 280px !important; 
+    }
+
+    /* 2. BARRA DE PROCURA: FORÇA ELA A APARECER ABAIXO DOS ÍCONES */
+    .container-sub {
+        display: block !important; /* Garante que ela não suma */
+        position: relative !important; /* Sai do modo fixo se estiver embolando */
+        margin-top: 80px !important; /* O espaço que você pediu abaixo dos produtos */
+        padding: 15px !important;
+        width: 100% !important;
+        clear: both !important; /* Limpa qualquer item flutuando do lado */
+    }
+
+    /* 3. PADRONIZAÇÃO: MASCULINO, FEMININO E NOVIDADES */
+    /* Colocamos todos no mesmo saco para o CSS tratar igual */
+    .product-grid, 
+    .promocao-grid, 
+    .presente-grid, 
+    .novidade-grid,
+    #novidades .novidade-grid,
+    #masculino .product-grid, 
+    #feminino .product-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 40px !important; /* Espaço entre os perfumes */
+        padding: 0 20px !important;
+        width: 100% !important;
+    }
+
+    /* 4. CARDS: TODOS COM O MESMO TAMANHO DE APP */
+    .product-card, .novidade-card {
+        width: 100% !important;
+        max-width: 330px !important;
+        margin: 0 auto !important;
+        height: auto !important;
+    }
+
+    /* 5. TÍTULOS: DISTÂNCIA CERTA */
+    .category-title, h2 {
+        margin-top: 50px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Esconde o que não deve aparecer no mobile */
+    .nav-links {
+        display: none !important;
+    }
+}
+
+/* AJUSTE PARA O PC - ESCONDER BOTÃO MENU */
+@media screen and (min-width: 992px) {
+    .menu-toggle, .mobile-menu-icon, .fa-bars {
+        display: none !important;
+    }
+    
+    #novidades .novidade-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
